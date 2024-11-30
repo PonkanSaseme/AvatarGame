@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529f44ee2474722469c73ac9d70fbbf6, type: 3}
+  m_Name: backHair
+  m_EditorClassIdentifier: 
+  spritesArray:
+  - {fileID: 21300000, guid: be2a4964a7abf7d4292e9d1c8402b07c, type: 3}
+  - {fileID: 21300000, guid: b1177d44b6493c74f81b62f850e7f35e, type: 3}
+  - {fileID: 21300000, guid: 07fbc04f721d20a428fb5a67ef32f39f, type: 3}
+  iconName: BackHair
+  currentSpriteIndex: 0
