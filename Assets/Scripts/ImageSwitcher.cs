@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.Networking;
-using System.Collections;
+using System.Collections.Generic;
 
 public class ImageSwitcher : MonoBehaviour
 {
@@ -10,9 +10,10 @@ public class ImageSwitcher : MonoBehaviour
     public Image image;
     public Image uiImage; //礶いUI瓜ボ
 
+    public List<Color> imageColor = new List<Color>(); //﹚︹布计秖㎝肅︹
+
     void Start()
     {
-        
     }
 
 
@@ -25,6 +26,7 @@ public class ImageSwitcher : MonoBehaviour
         objSet.currentSpriteIndex = (objSet.currentSpriteIndex + 1) % objSet.spritesArray.Count;
         image.sprite = objSet.spritesArray[objSet.currentSpriteIndex];
         uiImage.sprite = objSet.spritesArray[objSet.currentSpriteIndex];
+
     }
 
     //ち传sprite
@@ -38,13 +40,10 @@ public class ImageSwitcher : MonoBehaviour
         uiImage.sprite = objSet.spritesArray[objSet.currentSpriteIndex];
     }
 
-    public void SwitchToSprite(int index)
+    //ち传color
+    public void SwitchColor(int num)
     {
-        if (objSet.spritesArray == null || objSet.spritesArray.Count == 0 || index < 0 || index >= objSet.spritesArray.Count)
-            return;
-
-        objSet.currentSpriteIndex = index;
-        image.sprite = objSet.spritesArray[objSet.currentSpriteIndex];
-        uiImage.sprite = objSet.spritesArray[objSet.currentSpriteIndex];
+        image.color = imageColor[num];
+        uiImage.color = imageColor[num];
     }
 }
